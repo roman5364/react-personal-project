@@ -8,7 +8,7 @@ import { api } from '../../REST';
 import Checkbox from "../../theme/assets/Checkbox";
 import Task from "../Task"; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')
 
-import { sortTasksByGroup, sortTasksByDate } from "../../instruments";
+import { sortTasksByGroup } from "../../instruments";
 import Spinner from "../Spinner";
 
 export default class Scheduler extends Component {
