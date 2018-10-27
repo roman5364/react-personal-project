@@ -59,7 +59,7 @@ export default class Task extends PureComponent {
         });
     };
 
-    _updateNewTaskMessageOnKeyDown = (event) => {
+    _updateTaskMessageOnKeyDown = (event) => {
         const { newMessage } = this.state;
 
         if (!newMessage.trim()) {
@@ -162,7 +162,7 @@ export default class Task extends PureComponent {
                         disabled = { !isTaskEditing }
                         maxLength = { 50 }
                         onChange = { this._updateNewTaskMessage }
-                        onKeyDown = { this._updateNewTaskMessageOnKeyDown }
+                        onKeyDown = { this._updateTaskMessageOnKeyDown }
                         ref = { this.taskInput }
                         type = 'text'
                         value = { newMessage }
