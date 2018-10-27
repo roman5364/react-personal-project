@@ -51,7 +51,7 @@ export default class Task extends PureComponent {
         });
     };
 
-    _updateNewTaskMessage = (event) => {
+    _updateTaskMessage = (event) => {
         const { value } = event.target;
 
         this.setState({
@@ -161,7 +161,7 @@ export default class Task extends PureComponent {
                     <input
                         disabled = { !isTaskEditing }
                         maxLength = { 50 }
-                        onChange = { this._updateNewTaskMessage }
+                        onChange = { this._updateTaskMessage }
                         onKeyDown = { this._updateTaskMessageOnKeyDown }
                         ref = { this.taskInput }
                         type = 'text'
