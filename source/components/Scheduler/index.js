@@ -136,12 +136,13 @@ export default class Scheduler extends Component {
     };
 
     _fetchTasksAsync = async () => {
+        console.time('_fetchTasksAsync'); // setTime
         try {
             this._setTasksFetchingState(true);
             const tasks = await api.fetchTasks();
 
             this.setState({
-                tasks,
+                tasks: sortTasksByGroup(tasks),
             });
 
         } catch (error) {
@@ -150,6 +151,8 @@ export default class Scheduler extends Component {
         } finally {
             this._setTasksFetchingState(false);
         }
+
+        console.timeEnd('_fetchTasksAsync');
 
     };
 
