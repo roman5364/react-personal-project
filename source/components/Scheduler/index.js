@@ -230,7 +230,7 @@ export default class Scheduler extends Component {
                     </section>
                     <footer>
                         <Checkbox
-                            checked = { false }
+                            checked = { tasks.every((task) => task.completed === true) }
                             color1 = '#363636'
                             color2 = '#fff'
                             onClick = { this._completeAllTasksAsync }
